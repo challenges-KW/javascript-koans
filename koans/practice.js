@@ -8,6 +8,9 @@
 // // };
 // // console.log(megalomaniac.battleCry(4))
 
+const { on } = require("events");
+const { maxHeaderSize } = require("http");
+
 
 
 // var megalomaniac = {
@@ -56,40 +59,113 @@
 // console.log((aPerson.getFullName()));
 
 
-function nFun () {
-  var numbers = [1, 2, 3];
-  var odd = (numbers).filter(function (x) { return x % 2 !== 0 });
-};
+// function nFun () {
+//   var numbers = [1, 2, 3];
+//   var odd = (numbers).filter(function (x) { return x % 2 !== 0 });
+// };
 
-var numbers = [1, 2, 3];
-var odd = (numbers).filter(function (x) { return x % 2 !== 0 });
+// var numbers = [1, 2, 3];
+// var odd = (numbers).filter(function (x) { return x % 2 !== 0 });
 
-console.log(odd.length);
-console.log(numbers.length);
-console.log(odd);
-
-
-
-function mappingFun () {
-  var numbers = [1, 2, 3];
-  var numbersPlus1 = (numbers).map(function(x) { return x + 1 });
-};
-
-
-var numbers = [1, 2, 3];
-var numbersPlus1 = (numbers).map(function(x) { return x + 1 });
-
-console.log(numbersPlus1);
+// console.log(odd.length);
+// console.log(numbers.length);
+// console.log(odd);
 
 
 
-function redMemo () {
-  var numbers = [1, 2, 3];
-  var reduction = (numbers).reduce(
-          function(memo, x) { return memo + x }, 0);
-        };
-
-var reduction = (numbers).reduce(function(memo, x) { return memo + x }, 0);
+// function mappingFun () {
+//   var numbers = [1, 2, 3];
+//   var numbersPlus1 = (numbers).map(function(x) { return x + 1 });
+// };
 
 
-  console.log(reduction);
+// var numbers = [1, 2, 3];
+// var numbersPlus1 = (numbers).map(function(x) { return x + 1 });
+
+// console.log(numbersPlus1);
+
+
+// function redMemo () {
+//   var numbers = [1, 2, 3];
+//   var reduction = (numbers).reduce(
+//           function(memo, x) { return memo + x }, 0);
+//         };
+
+// var reduction = (numbers).reduce(function(memo, x) { return memo + x }, 0);
+
+
+//   console.log(reduction);
+
+
+
+
+
+// function usingForEach () {
+//   
+  var numbers = [1,2,3];
+  var msg = "";
+  var isEven = function (item) {
+    msg += (item % 2) === 0;
+  };
+
+  (numbers).forEach(isEven);
+
+  // expect(msg).toEqual("FILL IN");
+  // expect(numbers).toEqual(["Fill IN"]);
+
+// console.log(numbers);
+
+
+
+
+  // var onlyEven = [2,4,6];
+  // var mixedBag = [2,4,5,6];
+
+  // var isEven = function(x) { return x % 2 === 0 };
+
+  // // expect(_(onlyEven).all(isEven)).toBe(FILL_ME_IN);
+  // // expect(_(mixedBag).all(isEven)).toBe(FILL_ME_IN);
+
+  // console.log(onlyEven.every(isEven));
+  // console.log(mixedBag.every(isEven));
+
+
+
+  //   var onlyEven = [2,4,6];
+  //   var mixedBag = [2,4,5,6];
+
+  //   var isEven = function(x) { return x % 2 === 0 };
+
+  //   // expect(_(onlyEven).any(isEven)).toBe(FILL_ME_IN);
+  //   // expect(_(mixedBag).any(isEven)).toBe(FILL_ME_IN);
+
+
+  // console.log(onlyEven.some(isEven));
+  // console.log(mixedBag.some(isEven));
+
+
+//   it("should use range to generate an array", function() {
+//     expect(_.range(3)).toEqual(FILL_ME_IN);
+//     expect(_.range(1, 4)).toEqual(FILL_ME_IN);
+//     expect(_.range(0, -4, -1)).toEqual(FILL_ME_IN);
+// });
+
+
+
+
+// console.log(Array.from({length: 3}, (x, i) => i));
+// console.log(Array.from(Array(3).keys()));
+
+
+// var array = [];
+// for (var i = 1; i <= 4; i++) {
+//   console.log(array.push(i));
+// }
+
+let arr = [];
+
+for (let i = min; i <= max; i += step) {
+arr.push(i);
+}
+
+console.log(arr(1, 4));
