@@ -162,10 +162,20 @@ const { maxHeaderSize } = require("http");
 //   console.log(array.push(i));
 // }
 
-let arr = [];
 
-for (let i = min; i <= max; i += step) {
-arr.push(i);
-}
+//  var arrays = [[1, 2], [3, 4] ];
 
-console.log(arr(1, 4));
+//  var merged = [].concat.apply([], arrays);
+
+//  console.log(merged);
+
+
+//  let result = [[0, 1], 2]
+
+
+var reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+var result = ([ [0, 1], 2 ])
+var step = result.flat().map(x => x + 1);
+
+console.log(step.reduce(reducer));
