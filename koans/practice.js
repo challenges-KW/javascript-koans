@@ -6,10 +6,7 @@
 // //       Array(noOfBrains + 1).join(" " + this.mastermind);
 // //   }
 // // };
-// // console.log(megalomaniac.battleCry(4))
-
-const { on } = require("events");
-const { maxHeaderSize } = require("http");
+// console.log(megalomaniac.battleCry(4));
 
 
 
@@ -102,13 +99,13 @@ const { maxHeaderSize } = require("http");
 
 // function usingForEach () {
 //   
-  var numbers = [1,2,3];
-  var msg = "";
-  var isEven = function (item) {
-    msg += (item % 2) === 0;
-  };
+  // var numbers = [1,2,3];
+  // var msg = "";
+  // var isEven = function (item) {
+  //   msg += (item % 2) === 0;
+  // };
 
-  (numbers).forEach(isEven);
+  // (numbers).forEach(isEven);
 
   // expect(msg).toEqual("FILL IN");
   // expect(numbers).toEqual(["Fill IN"]);
@@ -173,9 +170,9 @@ const { maxHeaderSize } = require("http");
 //  let result = [[0, 1], 2]
 
 
-var reducer = (accumulator, currentValue) => accumulator + currentValue;
+// var reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-var result = ([ [0, 1], 2 ])
-var step = result.flat().map(x => x + 1);
+// var result = ([ [0, 1], 2 ])
+// var step = result.flat().map(x => x + 1);
 
-console.log(step.reduce(reducer));
+// console.log(step.reduce(reducer));
