@@ -18,16 +18,22 @@ describe("About Applying What We Have Learnt", function() {
 
   it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (imperative)", function () {
 
-    var i,j,hasMushrooms, productsICanEat = [];
+    var i, j, hasMushrooms, productsICanEat = [];
 
+    //loop through products array
     for (i = 0; i < products.length; i+=1) {
+        //if element of products does not contain nuts
         if (products[i].containsNuts === false) {
+          //set var hasMushrooms
             hasMushrooms = false;
+            //loop through ingredients array within products array
             for (j = 0; j < products[i].ingredients.length; j+=1) {
+              //if element of ingredients does  contain mushrooms
                if (products[i].ingredients[j] === "mushrooms") {
                   hasMushrooms = true;
                }
             }
+            //if does not have mushrooms push into products I can eat array
             if (!hasMushrooms) productsICanEat.push(products[i]);
         }
     }
@@ -39,25 +45,12 @@ describe("About Applying What We Have Learnt", function() {
 
       var productsICanEat = [];
 
-      /* solve using filter() & all() / any() */
-
-	  var containsMushrooms = function(ingredient){
-		return ingredient !== "mushrooms";
-	  }
-
-	  _.filter(products, function(pizza){
-		if(pizza.containsNuts === false){
-			if(_(pizza.ingredients).all(containsMushrooms)){
-				productsICanEat.push(pizza);
-			}
-		}			
-	  });
+      var hasMushrooms =  mushroom => mushroom === 'mushrooms';     
+    
+      productsICanEat = _(products).filter(mushroom => !mushroom.containsNuts && !_(mushroom.ingredients).some(hasMushrooms));      
 
       expect(productsICanEat.length).toBe(1);
   });
-
-
-  
 
   /*********************************************************************************/
 
@@ -70,14 +63,16 @@ describe("About Applying What We Have Learnt", function() {
       }
     }
 
-    expect(sum).toBe(FILL_ME_IN);
+    expect(sum).toBe(233168);
   });
 
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
 
-    var sum = FILL_ME_IN;    /* try chaining range() and reduce() */
+    var sum =     
+    
+    /* try chaining range() and reduce() */
 
-    expect(233168).toBe(FILL_ME_IN);
+    expect(233168).toBe(sum);
   });
 
   /*********************************************************************************/
